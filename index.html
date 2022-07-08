@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H先生的初次尝试</title>
+    <style>  
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="
+      background-color: #f1f1f1;
+      text-align:center;
+      padding:40px
+    ">
+
+      <p>欢迎进入我的个人世界</p>
+    </div>
+    <div style="
+      max-width:700px;
+      margin: 30px atuo;
+      padding:15px;
+      font-size: 20px;
+      line-height: 1.7;
+      color:green;
+    ">
+    <p>你好呀！这个网站是我自己打造的一个专属空间，以后会不定期分享一些自己的作品，同时也会持续对其进行优化，让它变得更加美观。敬请期待！</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    </div>
+    <div style="
+      background-color: #f1f1f1;
+      text-align:center;font-size: 10px;
+      padding:40px
+      
+    ">
+    <p>友情提示：</p>
+    <a href="https://space.bilibili.com/357390284">个人B站空间</a>
+    </div>
+    
+
+    <div style="text-align:center;font-size: 15px;">当前时间为：</div>
+      <div id="div1">
+      </div>
+        <!-- 显示实时时间 -->
+        <div class="box" 
+        style="
+        text-align:right;
+        font-size: 20px
+        ">
+        </div>
+        <script>
+            function getTime() {
+                var date = new Date();
+                var year = date.getFullYear(); //获取年份
+                var month = date.getMonth() + 1; //获取月份
+                var day = date.getDate(); //获取日期
+                var hour = date.getHours(); //获取小时
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes(); // 获取分
+                minute = minute < 10 ? '0' + minute : minute;
+                var seconds = date.getSeconds(); //获取秒
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+            }
+     
+            setInterval(function() {
+                document.querySelector('.box').innerHTML = getTime();
+            }, 1000)
+        </script>
+
+
+  </body>
+</html>
